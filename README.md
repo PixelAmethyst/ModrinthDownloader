@@ -52,8 +52,8 @@ Then gets the file size and name and print it. (The funtcion `__convert_bytes()`
 
 ```python
         if mod_version_to_download is not None:
-            mod_file = self.session.get(mod_version_to_download['files'][0]['url'],
-                                    timeout = 60).content
+            mod_file = self.session.get(
+                mod_version_to_download['files'][0]['url'], timeout = 60).content
 
             file_name = mod_version_to_download['files'][0]['filename']
             downloaded_file = path.join(output, file_name)
