@@ -7,7 +7,7 @@
          align='Absbottom'>
   </a> Modrinth base downloader </h1>
 
-#### Here's a list of things left to do on this project/module if you wanna contribute: **[TODO](https://github.com/PixelAmethyst/modrinth-base-downloader/TODO.md)**
+#### Here's a list of things left to do on this project/module if you wanna contribute: **[TODO](https://github.com/PixelAmethyst/modrinth-base-downloader/blob/main/TODO.md)**
 
 ### A simple downloader for mods hosted on the modrinth platform.
 
