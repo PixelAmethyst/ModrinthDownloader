@@ -5,7 +5,7 @@
          width='40'
          height='40'
          align='Absbottom'>
-  </a> Modrinth base downloader </h1>
+  </a> Modrinth downloader </h1>
 
 #### Here's a list of things left to do on this project/module if you wanna contribute: **[TODO](https://github.com/PixelAmethyst/modrinth-base-downloader/blob/main/TODO.md)**
 
