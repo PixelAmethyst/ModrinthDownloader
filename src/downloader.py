@@ -39,7 +39,7 @@ class Downloader:
 
         return f"{bytes:.2f} {units[byte]}"
 
-    def download_mod_from_modrinth(self, mod_slug, version, loader, manager_folder):
+    def download_mod_from_modrinth(self, mod_slug, version, loader, output):
         """ Download a mod using Modrinth API. """
 
         raw_response = self.session.get(
@@ -61,7 +61,7 @@ class Downloader:
                                     timeout = 60).content
 
             file_name = mod_version_to_download['files'][0]['filename']
-            downloaded_file = path.join(manager_folder, loader, version, file_name)
+            downloaded_file = path.join(output, loader, version, file_name)
 
             with open(downloaded_file, 'wb') as file:
                 file.write(mod_file)
