@@ -3,7 +3,8 @@
     an API and a requests session to handle a user-agent.
 
     This file will be part of our mod manager (in development)
-    AmethystManager, a resources manager for Minecraft.
+    AmethystManager, a resources (Texture packs, mods, plugins, etc)
+    manager for the game Minecraft.
 
     You should have received a copy of the GNU General Public License
     along with this script.  If not, see <http://www.gnu.org/licenses/>.
