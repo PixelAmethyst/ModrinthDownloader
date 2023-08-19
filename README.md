@@ -32,7 +32,46 @@ This function will be looking for a match for our loader, version and our mod sl
                 break
 ```
 
+Once it finds the match "`mod_version_to_download`" will no longer be "`None`", that means a compatible version of the mod was found.
+
+Make a get request to download the mod file using the url provided in the "`mod_version_to_download`" dictionary. The binary content of the file is stored in the "`mod_file`" variable.
+
+```python
+    mod_file = self.session.get(mod_version_to_download['files'][0]['url'], timeout=60).content
+```
+
+Then extracts the mod's filename from the information provided in the dictionary.
+
+```python
+    file_name = mod_version_to_download['files'][0]['filename']
+```
+
+The binary content of the file is stored in the "mod_file" variable, and then download the mod by open a new file in your output directory.
+
+Then gets the file size and name and print it. (The funtcion `__convert_bytes()` will convert the bytes into a slightly more readable number, for example: `1000000b > 1mb`)
+
+```python
+        if mod_version_to_download is not None:
+            mod_file = self.session.get(mod_version_to_download['files'][0]['url'],
+                                    timeout = 60).content
+
+            file_name = mod_version_to_download['files'][0]['filename']
+            downloaded_file = path.join(output, file_name)
+
+            with open(downloaded_file, 'wb') as file:
+                file.write(mod_file)
+
+            get_size = path.getsize(downloaded_file)
+            file_size = self.__convert_bytes(get_size)
+
+            print(f'Downloaded {file_size} - {file_name}')
+
+        else:
+            print(f'Cannot find "{mod_slug}" for version {version} or loader {loader}!')
+```
+
 The "`__init__`" of the class will store the Modrinth API url on a variable and start a requests session to handle an user-agent.
+
 ```python
     def __init__(self):
         self.modrinth_api = 'https://api.modrinth.com/v2'
