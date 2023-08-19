@@ -7,6 +7,8 @@
          align='Absbottom'>
   </a> Modrinth base downloader </h1>
 
+Here's a list of things left to do: **[TODO.md]()**
+
 ### A simple downloader for mods hosted on the modrinth platform.
 
 You can download mods from Modrinth by calling the function "`download_mod_from_modrinth`" from the class "`Downloader`".
