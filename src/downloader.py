@@ -57,11 +57,11 @@ class Downloader:
                 break
 
         if mod_version_to_download is not None:
-            mod_file = self.session.get(mod_version_to_download['files'][0]['url'],
-                                    timeout = 60).content
+            mod_file = self.session.get(
+                mod_version_to_download['files'][0]['url'], timeout = 60).content
 
             file_name = mod_version_to_download['files'][0]['filename']
-            downloaded_file = path.join(output, loader, version, file_name)
+            downloaded_file = path.join(output, file_name)
 
             with open(downloaded_file, 'wb') as file:
                 file.write(mod_file)
