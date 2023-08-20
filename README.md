@@ -9,6 +9,8 @@
 
 #### Here's a list of things left to do on this project/module if you wanna contribute: **[TODO](https://github.com/PixelAmethyst/modrinth-base-downloader/blob/main/TODO.md)**
 
++ This downlaoder class will change once we finish the GUI.
+
 ### A simple downloader for mods hosted on the modrinth platform.
 
 You can download mods from Modrinth by calling the function "`download_mod_from_modrinth`" from the class "`Downloader`".
