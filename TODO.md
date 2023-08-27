@@ -1,4 +1,4 @@
-## To do list for `PixelAmethyst/modrinth-base-downloader` 📃
+## To do list for `ModrinthDownloader` 📃
 
 - Better search funtcion.
 - Add module to PyPi.
